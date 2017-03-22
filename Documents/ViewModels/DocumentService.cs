@@ -50,6 +50,7 @@ namespace Documents.ViewModels
             Person person = new Person()
             {
                 Name = "Stanley",
+                Job = "Programmer",
             };
 
             person.Documents.Add(document);

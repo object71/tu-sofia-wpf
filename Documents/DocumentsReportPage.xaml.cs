@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Documents.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +28,9 @@ namespace Documents
 
         // Custom constructor to pass expense report data 
         public DocumentsReportPage(object data):this() {
+            Person person = data as Person;
             // Bind to expense report data. 
-            this.DataContext = data;
+            this.DataContext = person;
         }
     }
 }

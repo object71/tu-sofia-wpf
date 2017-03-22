@@ -33,7 +33,13 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Име</Label>
         </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource vm}, Path=People}" ></ListBox>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource vm}, Path=People}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Name}"></Label>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <!-- View report button -->
         <Button Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}" Grid.ColumnSpan="2" Width="142">Виж</Button>
     </Grid>

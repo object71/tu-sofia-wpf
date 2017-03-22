@@ -35,3 +35,4 @@ C:\Users\Student\Source\Repos\tu-sofia-wpf\Documents\obj\Debug\Documents.Propert
 C:\Users\Student\Source\Repos\tu-sofia-wpf\Documents\obj\Debug\Documents.csproj.GenerateResource.Cache
 C:\Users\Student\Source\Repos\tu-sofia-wpf\Documents\obj\Debug\Documents.exe
 C:\Users\Student\Source\Repos\tu-sofia-wpf\Documents\obj\Debug\Documents.pdb
+C:\Users\Student\Source\Repos\tu-sofia-wpf\Documents\bin\Debug\Documents.pdb

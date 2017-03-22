@@ -26,6 +26,18 @@ namespace Documents.Models
             }
         }
 
+        private string job;
+
+        public string Job
+        {
+            get { return this.job; }
+            set
+            {
+                this.job = value;
+                NotifyChanged(MethodBase.GetCurrentMethod().Name);
+            }
+        }
+
         private void NotifyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)
@@ -34,7 +46,16 @@ namespace Documents.Models
             }
         }
 
-        public ObservableCollection<Document> Documents { get; set; }
+        private ObservableCollection<Document> documents;
+        public ObservableCollection<Document> Documents
+        {
+            get { return this.documents; }
+            set
+            {
+                this.documents = value;
+                NotifyChanged(MethodBase.GetCurrentMethod().Name);
+            }
+        }
 
         public Person()
         {

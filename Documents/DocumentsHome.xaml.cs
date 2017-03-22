@@ -21,11 +21,13 @@ namespace Documents
     /// </summary>
     public partial class DocumentsHome : Page
     {
+        DocumentService service = new DocumentService();
+
         public DocumentsHome()
         {
             InitializeComponent();
 
-            this.DataContext = new DocumentService();
+            this.DataContext = service;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

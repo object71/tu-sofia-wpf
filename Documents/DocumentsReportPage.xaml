@@ -5,23 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Documents"
       mc:Ignorable="d" 
+      xmlns:ps="clr-namespace:Documents.Models"
       d:DesignHeight="300" d:DesignWidth="600"
       Title="DocumentsReportPage">
 
     <Grid>
         <!--Templates to display expense report data-->
         <Grid.Resources>
-            <!-- Reason item template -->
-            <DataTemplate x:Key="typeItemTemplate">
-                <Label Content="{Binding XPath=@DocumentType}"/>
-            </DataTemplate>
-            <!-- Amount item template -->
-            <DataTemplate x:Key="dateItemTemplate">
-                <Label Content="{Binding XPath=@ReleaseDate}"/>
-            </DataTemplate>
-            <DataTemplate x:Key="numberItemTemplate">
-                <Label Content="{Binding XPath=@DocumentNumber}"/>
-            </DataTemplate>
+            <ps:Person x:Key="ps"></ps:Person>
         </Grid.Resources>
         <Grid.Background>
             <ImageBrush ImageSource="watermark.png" />
@@ -48,20 +39,20 @@
             <!-- Name -->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Име:</Label>
-                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding Name}"></Label>
             </StackPanel>
             <!-- Department -->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Работа:</Label>
-                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Job}"></Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding Job}"></Label>
             </StackPanel>
             <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left">
                 <!-- Expense type and Amount table -->
-                <DataGrid ItemsSource="{Binding XPath=Document}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
+                <DataGrid ItemsSource="{Binding Documents}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Вид на документа" Binding="{Binding XPath=@DocumentType}"/>
-                        <DataGridTextColumn Header="Дата на издаване" Binding="{Binding XPath=@ReleaseDate}"/>
-                        <DataGridTextColumn Header="Номер на документа" Binding="{Binding XPath=@DocumentNumber}"/>
+                        <DataGridTextColumn Header="Вид на документа" Binding="{Binding DocumentName}"/>
+                        <DataGridTextColumn Header="Дата на издаване" Binding="{Binding CreationDate}"/>
+                        <DataGridTextColumn Header="Номер на документа" Binding="{Binding DocumentId}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
