@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPF", "HelloWPF\HelloWPF.csproj", "{90A5313D-E088-46FB-9F61-EE8583AE69EF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Documents\Documents.csproj", "{A806CD17-9919-4480-8561-C1D4E25AFB9F}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90A5313D-E088-46FB-9F61-EE8583AE69EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90A5313D-E088-46FB-9F61-EE8583AE69EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90A5313D-E088-46FB-9F61-EE8583AE69EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90A5313D-E088-46FB-9F61-EE8583AE69EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A806CD17-9919-4480-8561-C1D4E25AFB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A806CD17-9919-4480-8561-C1D4E25AFB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A806CD17-9919-4480-8561-C1D4E25AFB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU

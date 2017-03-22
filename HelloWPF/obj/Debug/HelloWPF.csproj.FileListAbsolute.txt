@@ -12,3 +12,11 @@ D:\tu\sem6\PS\programs\HelloWPF\HelloWPF\obj\Debug\HelloWPF.Properties.Resources
 D:\tu\sem6\PS\programs\HelloWPF\HelloWPF\obj\Debug\HelloWPF.csproj.GenerateResource.Cache
 D:\tu\sem6\PS\programs\HelloWPF\HelloWPF\obj\Debug\HelloWPF.exe
 D:\tu\sem6\PS\programs\HelloWPF\HelloWPF\obj\Debug\HelloWPF.pdb
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\bin\Debug\HelloWPF.exe.config
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\HelloWPF.exe
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\HelloWPF.pdb
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\HelloWPF.csprojResolveAssemblyReference.cache
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\App.g.cs
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\HelloWPF_MarkupCompile.cache
+C:\Users\Student\Source\Repos\tu-sofia-wpf\HelloWPF\obj\Debug\HelloWPF_MarkupCompile.lref
