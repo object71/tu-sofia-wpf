@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Documents.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Documents
         public DocumentsHome()
         {
             InitializeComponent();
+
+            this.DataContext = new DocumentService();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

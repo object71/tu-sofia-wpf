@@ -3,40 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Documents"
+      xmlns:vm="clr-namespace:Documents.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Documents - Home">
 
     <Grid>
         <Grid.Resources>
-            <!-- Expense Report Data -->
-            <XmlDataProvider x:Key="DocumentsDataSource" XPath="Documents">
-                <x:XData>
-                    <Documents xmlns="">
-                        <Person Name="Георги Петров" Job="Програмист">
-                            <Document DocumentType="Лична карта" ReleaseDate="21.03.2012" DocumentNumber ="******12"/>
-                            <Document DocumentType="Шофьорска книжка" ReleaseDate="27.05.2016" DocumentNumber ="******33"/>
-                        </Person>
-                        <Person Name="Изабела Борисова" Job="QA">
-                            <Document DocumentType="Лична карта" ReleaseDate="03.08.2009" DocumentNumber ="******32"/>
-                            <Document DocumentType="Шофьорска книжка" ReleaseDate="27.05.2016" DocumentNumber ="******12"/>
-                        </Person>
-                        <Person Name="Ива Георгиева" Job="Системен администратор">
-                            <Document DocumentType="Лична карта" ReleaseDate="09.09.2010" DocumentNumber ="******31"/>
-                            <Document DocumentType="Шофьорска книжка" ReleaseDate="27.05.2016" DocumentNumber ="******52"/>
-                            <Document DocumentType="Дебитна карта" ReleaseDate="03.08.2009" DocumentNumber ="******65"/>
-                        </Person>
-                        <Person Name="Анелия Петрова" Job="C програмист">
-                            <Document DocumentType="Лична карта" ReleaseDate="27.05.2016" DocumentNumber ="******71"/>
-                        </Person>
-                    </Documents>
-                </x:XData>
-            </XmlDataProvider>
-            <!-- Name item template -->
-            <DataTemplate x:Key="nameItemTemplate">
-                <Label Content="{Binding XPath=@Name}"/>
-            </DataTemplate>
+            <vm:DocumentService x:Key="vm"></vm:DocumentService>
         </Grid.Resources>
 
         <Grid.Background>
@@ -59,7 +33,7 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Име</Label>
         </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource DocumentsDataSource}, XPath=Person}" ItemTemplate="{StaticResource nameItemTemplate}"></ListBox>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource vm}, Path=People}" ></ListBox>
         <!-- View report button -->
         <Button Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}" Grid.ColumnSpan="2" Width="142">Виж</Button>
     </Grid>
