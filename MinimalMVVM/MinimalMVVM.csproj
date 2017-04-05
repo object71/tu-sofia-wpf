@@ -8,7 +8,7 @@
     <ProjectGuid>{A71E07A6-F620-46E1-8C30-D6AE9552136A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MinimalMVVM</RootNamespace>
+    <RootNamespace>HelloWPF</RootNamespace>
     <AssemblyName>MinimalMVVM</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MinimalMVVM.App</StartupObject>
+    <StartupObject>HelloWPF.MinimalMVVM.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

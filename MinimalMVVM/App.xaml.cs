@@ -1,4 +1,4 @@
-﻿namespace MinimalMVVM
+﻿namespace HelloWPF.MinimalMVVM
 {
     public partial class App
     {

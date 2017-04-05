@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using MinimalMVVM.Model;
+using HelloWPF.MinimalMVVM.Model;
 
-namespace MinimalMVVM.ViewModel
+namespace HelloWPF.MinimalMVVM.ViewModel
 {
     public class Presenter : ObservableObject
     {

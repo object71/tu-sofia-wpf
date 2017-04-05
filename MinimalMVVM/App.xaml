@@ -1,4 +1,4 @@
-﻿<Application x:Class="MinimalMVVM.App"
+﻿<Application x:Class="HelloWPF.MinimalMVVM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="View\MainWindow.xaml">

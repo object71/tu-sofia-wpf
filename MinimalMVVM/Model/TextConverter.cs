@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MinimalMVVM.Model
+namespace HelloWPF.MinimalMVVM.Model
 {
     public class TextConverter
     {
