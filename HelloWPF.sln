@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Documents\Documents.csproj", "{A806CD17-9919-4480-8561-C1D4E25AFB9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExampleMVVM", "WpfExampleMVVM\WpfExampleMVVM.csproj", "{25BD70E2-4602-40CD-850B-6F08D6580BEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalMVVM", "MinimalMVVM\MinimalMVVM.csproj", "{A71E07A6-F620-46E1-8C30-D6AE9552136A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_EF_Mvvm_sample", "Wpf_EF_Mvvm_sample\Wpf_EF_Mvvm_sample.csproj", "{14840A15-CB19-457B-9EF0-5C50D0A8487F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A71E07A6-F620-46E1-8C30-D6AE9552136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A71E07A6-F620-46E1-8C30-D6AE9552136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A71E07A6-F620-46E1-8C30-D6AE9552136A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14840A15-CB19-457B-9EF0-5C50D0A8487F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14840A15-CB19-457B-9EF0-5C50D0A8487F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14840A15-CB19-457B-9EF0-5C50D0A8487F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14840A15-CB19-457B-9EF0-5C50D0A8487F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,64 @@
+﻿<Page x:Class="Documents.Views.DocumentsReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Documents"
+      mc:Ignorable="d" 
+      xmlns:vm="clr-namespace:Documents.ViewModels"
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="DocumentsReportPage">
+
+    <Page.DataContext>
+        <vm:DocumentsReportPageViewModel />
+    </Page.DataContext>
+    <Grid>
+        <!--Templates to display expense report data-->
+        <!--<Grid.Resources>
+            <ps:Person x:Key="ps"></ps:Person>
+        </Grid.Resources>-->
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">Информация за документите на:</Label>
+        <Grid Margin="10" Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- Name -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Име:</Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding Name}"></Label>
+            </StackPanel>
+            <!-- Department -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Работа:</Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding Job}"></Label>
+            </StackPanel>
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <!-- Expense type and Amount table -->
+                <DataGrid ItemsSource="{Binding Documents}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Вид на документа" Binding="{Binding DocumentName}"/>
+                        <DataGridTextColumn Header="Дата на издаване" Binding="{Binding CreationDate}"/>
+                        <DataGridTextColumn Header="Номер на документа" Binding="{Binding DocumentId}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

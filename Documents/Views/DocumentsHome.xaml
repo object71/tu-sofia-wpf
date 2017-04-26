@@ -1,0 +1,64 @@
+﻿<Page x:Class="Documents.Views.DocumentsHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:Documents.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="Documents - Home">
+
+    <Page.DataContext>
+        <vm:DocumentsHomeViewModel />
+    </Page.DataContext>
+    <ListView    ItemsSource="{Binding People}" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Name: " />
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Job: " />
+                        <TextBlock Text="{Binding Job}" FontWeight="Bold" />
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <!--<Grid>
+        --><!--<Grid.Resources>
+            <vm:DocumentService x:Key="documentService"></vm:DocumentService>
+        </Grid.Resources>--><!--
+
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        --><!-- People list --><!--
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >
+            Виж документите за
+        </Label>
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
+            <Label Style="{StaticResource listHeaderTextStyle}">Име</Label>
+        </Border>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource documentService}, Path=People}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Name}"></Label>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        --><!-- View report button --><!--
+        <Button Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}" Grid.ColumnSpan="2" Width="142">Виж</Button>
+    </Grid>-->
+</Page>

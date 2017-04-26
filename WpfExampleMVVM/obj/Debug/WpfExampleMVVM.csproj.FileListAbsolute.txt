@@ -1,0 +1,15 @@
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\bin\Debug\WpfExampleMVVM.exe.config
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\bin\Debug\WpfExampleMVVM.exe
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\bin\Debug\WpfExampleMVVM.pdb
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.csprojResolveAssemblyReference.cache
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\MainWindowView.g.cs
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\App.g.cs
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM_MarkupCompile.cache
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM_MarkupCompile.lref
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\MainWindowView.baml
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.g.resources
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.Properties.Resources.resources
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.csproj.GenerateResource.Cache
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.exe
+C:\Users\Student\Source\Repos\tu-sofia-wpf\WpfExampleMVVM\obj\Debug\WpfExampleMVVM.pdb

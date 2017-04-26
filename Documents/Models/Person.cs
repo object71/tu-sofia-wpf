@@ -10,56 +10,19 @@ using System.Windows;
 
 namespace Documents.Models
 {
-    public class Person : DependencyObject, INotifyPropertyChanged
+    public class Person : DependencyObject
     {
-        private string name;
+        public int Id { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get { return this.name; }
-            set
-            {
-                this.name = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        public string Job { get; set; }
 
-        private string job;
-
-        public string Job
-        {
-            get { return this.job; }
-            set
-            {
-                this.job = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
-
-        private void NotifyChanged(string propertyName)
-        {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        private ObservableCollection<Document> documents;
-        public ObservableCollection<Document> Documents
-        {
-            get { return this.documents; }
-            set
-            {
-                this.documents = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        public virtual ICollection<Document> Documents { get; set; }
 
         public Person()
         {
-            Documents = new ObservableCollection<Document>();
+            Documents = new List<Document>();
         }
     }
 }

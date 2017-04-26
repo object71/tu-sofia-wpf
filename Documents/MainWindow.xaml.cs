@@ -22,6 +22,7 @@ namespace Documents
     {
         public MainWindow()
         {
+            this.Source = new Uri("Views/DocumentsHome.xaml", UriKind.Relative);
             InitializeComponent();
         }
     }

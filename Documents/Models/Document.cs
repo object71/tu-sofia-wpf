@@ -9,61 +9,35 @@ using System.Windows;
 
 namespace Documents.Models
 {
-    public class Document : DependencyObject, INotifyPropertyChanged
+    public class Document : DependencyObject
     {
-        private string documentName;
-        private string documentId;
-        private string description;
-        private DateTime creationDate;
+        //private string documentName;
+        //private string documentId;
+        //private string description;
+        //private DateTime creationDate;
 
-        public string DocumentName
-        {
-            get { return this.documentName; }
-            set
-            {
-                this.documentName = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        //public string DocumentName
+        //{
+        //    get { return this.documentName; }
+        //    set
+        //    {
+        //        this.documentName = value;
+        //        NotifyChanged(MethodBase.GetCurrentMethod().Name);
+        //    }
+        //}
 
-        public string DocumentId
-        {
-            get { return this.documentId; }
-            set
-            {
-                this.documentId = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        public int Id { get; set; }
 
-        public string Description
-        {
-            get { return this.description; }
-            set
-            {
-                this.description = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        public string DocumentId { get; set; }
 
-        public DateTime CreationDate
-        {
-            get { return this.creationDate; }
-            set
-            {
-                this.creationDate = value;
-                NotifyChanged(MethodBase.GetCurrentMethod().Name);
-            }
-        }
+        public string DocumentName { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public string Description { get; set; }
 
-        private void NotifyChanged(string propertyName)
-        {
-            if(this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
+        public DateTime CreationDate { get; set; }
+
+        public int PersonId { get; set; }
+
+        public virtual Person Person { get; set; }
+}
 }
