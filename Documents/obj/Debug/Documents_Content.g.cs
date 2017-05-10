@@ -9,6 +9,8 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("documentsdb.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("documentsdb2.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("documentsdb2_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("documentsdb_log.ldf")]
 
 

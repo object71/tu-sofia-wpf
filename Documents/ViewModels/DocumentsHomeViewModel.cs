@@ -2,21 +2,27 @@
 using Documents.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Documents.ViewModels
 {
-    public class DocumentsHomeViewModel : INotifyPropertyChanged
+    public class DocumentsHomeViewModel : DependencyObject, INotifyPropertyChanged
     {
         DocumentsDB ctx = new DocumentsDB();
 
         public DocumentsHomeViewModel()
         {
-            this.Authors = ctx.People.ToList();
+            this.People = new ObservableCollection<Person>();
+            foreach(Person p in ctx.People.ToArray())
+            {
+                this.People.Add(p);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -28,8 +34,8 @@ namespace Documents.ViewModels
             }
         }
 
-        private List<Person> _people;
-        public List<Person> Authors
+        private ObservableCollection<Person> _people;
+        public ObservableCollection<Person> People
         {
             get
             {

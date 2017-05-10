@@ -1,4 +1,5 @@
-﻿using Documents.ViewModels;
+﻿using Documents.Models;
+using Documents.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,17 @@ namespace Documents.Views
         {
             //DocumentsReportPage documentsReportPage = new DocumentsReportPage(this.peopleListBox.SelectedItem);
             //this.NavigationService.Navigate(documentsReportPage);
+        }
+
+        private void addPerson_Click(object sender, RoutedEventArgs e)
+        {
+            DocumentsHomeViewModel model = (DocumentsHomeViewModel)this.DataContext;
+            Person person = new Person();
+            person.Name = "Person-" + model.People.Count();
+            person.Job = "Unemployed";
+            model.People.Add(person);
+
+            model.SelectedPerson = person;
         }
     }
 }

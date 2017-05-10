@@ -11,54 +11,17 @@
     <Page.DataContext>
         <vm:DocumentsHomeViewModel />
     </Page.DataContext>
-    <ListView    ItemsSource="{Binding People}" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Name: " />
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
-                        <TextBlock Text=", " />
-                        <TextBlock Text="Job: " />
-                        <TextBlock Text="{Binding Job}" FontWeight="Bold" />
-                    </StackPanel>
-                </StackPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-    <!--<Grid>
-        --><!--<Grid.Resources>
-            <vm:DocumentService x:Key="documentService"></vm:DocumentService>
-        </Grid.Resources>--><!--
+    <Grid Margin="-21,-10,21,10">
+        <StackPanel HorizontalAlignment="Left" Height="280" Margin="165,10,0,0" VerticalAlignment="Top" Width="425">
+            <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Height="24" Width="235"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="TextBox" Width="235" DataContext="{Binding SelectedPerson.Name}"/>
+            <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="24" Width="235"/>
+            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="TextBox" Width="235" DataContext="{Binding SelectedPerson.Job}"/>
+            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="25" Width="136" Margin="0,25,0,0"/>
+            <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Height="25" Width="136" Margin="0,25,0,0"/>
+        </StackPanel>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="233" Margin="19,8,0,0" VerticalAlignment="Top" Width="141" ItemsSource="{Binding People}" ItemTemplate="{Binding Name}"/>
+        <Button x:Name="addPerson" Click="addPerson_Click" Content="Add" HorizontalAlignment="Left" Height="44" Margin="19,246,0,0" VerticalAlignment="Top" Width="141"/>
 
-        <Grid.Background>
-            <ImageBrush ImageSource="watermark.png" />
-        </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="230" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition />
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        --><!-- People list --><!--
-        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >
-            Виж документите за
-        </Label>
-        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
-            <Label Style="{StaticResource listHeaderTextStyle}">Име</Label>
-        </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource documentService}, Path=People}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Label Content="{Binding Name}"></Label>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        --><!-- View report button --><!--
-        <Button Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}" Grid.ColumnSpan="2" Width="142">Виж</Button>
-    </Grid>-->
+    </Grid>
 </Page>
